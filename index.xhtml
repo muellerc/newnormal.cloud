@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <meta name="description" content="My AWS blog" />
+    <meta name="author" content="Christian Müller" />
+    <link rel="icon" href="images/favicon.ico" />
+
+    <title>Cloud - the new normal</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="css/blog.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="#">Home</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">Cloud - the new normal</h1>
+        <p class="lead blog-description">A blog about the wonderful world of AWS services</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+
+          <div class="blog-post">
+            <h2 class="blog-post-title">A Blog Only Based On S3</h2>
+            <p class="blog-post-meta">December 6, 2016</p>
+
+            <p>This blog post shows how to create a simple blog only based on <a href="https://aws.amazon.com/s3/">AWS S3</a>.</p>
+            <hr/>
+            <p>I'm using <a href="http://getbootstrap.com">Bootstrap's</a> Blog template to jump start. You can find all the required resources in my <a href="https://github.com/muellerc/newnormal.cloud">GitHub repository</a>. Navigate to your <a href="https://console.aws.amazon.com/s3/home">AWS console for AWS S3</a> and start with creating a new bucket of your choice.</p>
+            <blockquote>
+              <p><strong>NOTE:</strong> all bucket names has to be unique across a region and all users!</p>
+            </blockquote>
+            <p>After you have created the bucket (newnormal.cloud in this example), set up the following folder and file structure (you can find the files in my <a href="https://github.com/muellerc/newnormal.cloud">GitHub repository</a>):</p>
+            <pre>
+              <code>
+newnormal.cloud                   (bucket)
+ |- index.xhtml                   (file/object)
+ |- js                            (folder)
+ | |- bootstrap-3.3.7.min.js      (file/object)
+ | \- jquery-1.12.4.min.js        (file/object)
+ |- css                           (folder)
+ | |- bootstrap.min.css           (file/object)
+ | \- blog.css                    (file/object)
+ \- images                        (folder)
+   |- image.jpg                   (file/object)
+   |- enable_website_hosting.png  (file/object)
+   |- make_public.png             (file/object)
+   \- favicon.ico                 (file/object)
+              </code>
+            </pre>
+            <p/>
+            <p>After you have uploaded all files, select you bucket in the console so that the bucket properties are listet as shown below. Unfold the section <b>Static Website Hosting</b> and select <b>Enable website hosting</b>. Enter <b>index.xhtml</b> into the field <b>Index Document</b> and save the changes:</p>
+            <img src="images/enable_website_hosting.png" class="img-responsive" style="width:100%" />
+            <p/>
+            <p>Last but not least, you have to make your files and folders public, so that everybody can view it. To do so, select all files and folder in the root of your bucket and choose <b>Make Public</b> from the <b>Actions</b> menue:</p>
+            <img src="images/make_public.png" class="img-responsive" style="width:100%" />
+            <p/>
+            <p>Now you are done and ready to go!</p>
+          </div><!-- /.blog-post -->
+
+          <nav>
+            <ul class="pager">
+              <li><a href="#">Previous</a></li>
+              <li><a href="#">Next</a></li>
+            </ul>
+          </nav>
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+
+          <div class="sidebar-module">
+            <img src="images/image.jpg" class="img-responsive" style="width:100%" />
+          </div>
+
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About Me</h4>
+            <p><b>Christian Müller</b> is getting a Solutions Architect at Amazon Web Services in Frankfurt (Germany). With my strong background in large custom application development projects in the financial services industry, I support German startup's, fintech's and medium-sized companies on their journey to the cloud. With this experience I loves to dive deep into application architectures and development processes to drive security, performance, operational efficiency and increase the speed of innovation.</p>
+          </div>
+
+          <div class="sidebar-module">
+            <h4>Archives</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">December 2016</a></li>
+            </ol>
+          </div>
+
+          <div class="sidebar-module">
+            <h4>Other places</h4>
+            <ol class="list-unstyled">
+              <li><a href="https://github.com/muellerc">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/christian-mueller">LinkedIn</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>Blog built for AWS S3 based on <a href="http://getbootstrap.com">Bootstrap</a>.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap-3.3.7.min.js"></script>
+  </body>
+</html>
